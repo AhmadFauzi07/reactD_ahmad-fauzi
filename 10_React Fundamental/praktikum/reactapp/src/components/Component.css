@@ -1,0 +1,16 @@
+.contain {
+  margin: auto;
+  margin-top: 3px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(240, 188, 93);
+  border-style: solid;
+  padding: 3px 1rem;
+}
+
+.header-styled {
+  width: auto;
+  padding: 2px 1.5rem;
+  border-bottom: solid 1px rgb(184, 182, 181);
+}
