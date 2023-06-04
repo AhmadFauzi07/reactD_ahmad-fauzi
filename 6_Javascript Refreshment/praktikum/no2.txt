@@ -1,5 +1,0 @@
-No.2 Javascript
-
-a. karena deklarasi pada line 4 adalah false sehingga tidak bisa tampil karena if terdaftar === true
-b. karena type const tidak dapat redeclaration
-c. tidak dapat di eksekusi karena deklarasi asal tidak berada di global

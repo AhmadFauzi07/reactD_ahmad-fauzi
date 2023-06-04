@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/challenge.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Challange</title>
+  </head>
+
+  <body>
+    <h1>Challange</h1>
+    <div class="container">
+      <fieldset>
+        <legend>Data Mahasiswa:</legend>
+        <!-- Form Data Mahasiswa -->
+        <form action="">
+          <div>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="First Name"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="lastName`"
+              id="lastName`"
+              placeholder="Last Name"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="tempatLahir"
+              id="tempatLahir"
+              placeholder="Tempat Lahir"
+            />
+          </div>
+          <div>
+            <section>
+              <label for="tanggalLahir">Tanggal Lahir: </label>
+              <input type="date" name="tanggalLahir" id="tanggalLahir" />
+            </section>
+          </div>
+          <div>
+            <textarea
+              name="alamat"
+              id="alamat"
+              cols="30"
+              rows="5"
+              placeholder="alamat"
+            ></textarea>
+          </div>
+          <div>
+            <input type="email" name="email" id="email" placeholder="email" />
+          </div>
+          <div>
+            <input
+              type="tel"
+              name="noTelp"
+              id="noTelp"
+              placeholder="No Telpon"
+            />
+          </div>
+          <div>
+            <section>
+              <label for="smt">Semester: </label>
+              <select name="smt" id="smt">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </section>
+          </div>
+          <div>
+            <section>
+              <label for="agama">Agama</label> <br />
+              <input type="radio" name="agama" id="islam" />
+              <label for="islam">Islam</label><br />
+              <input type="radio" name="agama" id="kristen" />
+              <label for="kristen">Kristen</label><br />
+              <input type="radio" name="agama" id="protestan" />
+              <label for="protestan">Protestan</label><br />
+              <input type="radio" name="agama" id="hindu" />
+              <label for="hindu">Hindu</label><br />
+              <input type="radio" name="agama" id="budha" />
+              <label for="budha">Budha</label><br />
+              <input type="radio" name="agama" id="konghuchu" />
+              <label for="konghuchu">Konghuchu</label>
+            </section>
+          </div>
+          <div>
+            <textarea
+              name="summary"
+              id="summary"
+              cols="30"
+              rows="5"
+              placeholder="Summary"
+            ></textarea>
+          </div>
+          <div>
+            <button type="button">Submit</button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
