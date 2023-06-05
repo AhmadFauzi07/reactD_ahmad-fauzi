@@ -1,0 +1,13 @@
+.product {
+  margin: 70px auto;
+}
+
+.container__product {
+  padding: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .container__product {
+    padding: 0;
+  }
+}
