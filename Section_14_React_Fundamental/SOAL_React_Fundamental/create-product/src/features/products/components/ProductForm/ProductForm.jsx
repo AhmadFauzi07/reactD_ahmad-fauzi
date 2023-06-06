@@ -26,7 +26,8 @@ const ProductForm = () => {
           onFinish={(e) => console.log(e, "asd")}
           name="form_product"
           initialValues={{
-            product_category: "",
+            product_name: "",
+            product_category: undefined,
             product_freshness: "",
             product_price: 0,
             product_image: null,
@@ -34,6 +35,20 @@ const ProductForm = () => {
           }}
           scrollToFirstError
         >
+          <Form.Item
+            label="Product Name"
+            name="product_name"
+            rules={[
+              {
+                required: true,
+                message: "Please Product Name",
+              },
+            ]}
+            required
+          >
+            <Input type="text" placeholder="Input product name" />
+          </Form.Item>
+
           <Form.Item
             name="product_category"
             label="Product Category"
@@ -77,7 +92,6 @@ const ProductForm = () => {
               {
                 required: true,
                 message: "Please input product price",
-                // type: "number",
               },
             ]}
             required
@@ -89,22 +103,21 @@ const ProductForm = () => {
             />
           </Form.Item>
 
-          <Form.Item label="Image Product">
-            <Form.Item name="product_image">
-              <Upload.Dragger
-                showUploadList={false}
-                beforeUpload={(file) => {
-                  console.log(file, "file");
-                }}
-              >
-                <p className="ant-upload-text">
-                  Click or drag file to this area to upload
-                </p>
-                <p className="ant-upload-hint">
-                  Support for a single or bulk upload.
-                </p>
-              </Upload.Dragger>
-            </Form.Item>
+          <Form.Item
+            name="product_image"
+            label="Image Product"
+            valuePropName="fileList"
+            getValueFromEvent={normFile}
+            rules={[
+              {
+                required: true,
+                message: "Input Image Product",
+              },
+            ]}
+          >
+            <Upload name="image" action="/upload.do" listType="picture">
+              <Button>Click to upload</Button>
+            </Upload>
           </Form.Item>
 
           <Form.Item

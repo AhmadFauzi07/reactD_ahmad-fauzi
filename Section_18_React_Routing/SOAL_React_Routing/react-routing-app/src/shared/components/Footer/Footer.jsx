@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Typography.Text>
-          React Event Handling © {currentYear}. All rights reserved.
+          React Routing © {currentYear}. All rights reserved.
         </Typography.Text>
       </Container>
     </footer>

@@ -6,7 +6,7 @@ import Container from "../../../../shared/components/Container/Container";
 
 import "./ProductForm.css";
 
-const ProductForm = () => {
+const ProductForm = (props) => {
   const [form] = Form.useForm();
 
   const normFile = (e) => {
@@ -16,14 +16,6 @@ const ProductForm = () => {
     return e?.fileList;
   };
 
-  const onFinish = (val) => {
-    const random = Math.floor(Math.random() * 100);
-    console.log({
-      randomNumber: random,
-      product: val,
-    });
-  };
-
   return (
     <section className="product">
       <Container className="container__product">
@@ -31,7 +23,7 @@ const ProductForm = () => {
           form={form}
           autoComplete="off"
           layout="vertical"
-          onFinish={onFinish}
+          onFinish={props.onFinish}
           name="form_product"
           initialValues={{
             product_name: "",
@@ -50,6 +42,10 @@ const ProductForm = () => {
               {
                 required: true,
                 message: "Please Product Name",
+              },
+              {
+                pattern: /^[a-zA-Z ]*$/,
+                message: "Input only alphabet is allowed",
               },
             ]}
             required
@@ -123,7 +119,13 @@ const ProductForm = () => {
               },
             ]}
           >
-            <Upload name="image" action="/upload.do" listType="picture">
+            <Upload
+              maxCount={1}
+              name="image"
+              action="/create-product"
+              listType="picture"
+              accept="image/*"
+            >
               <Button>Click to upload</Button>
             </Upload>
           </Form.Item>
